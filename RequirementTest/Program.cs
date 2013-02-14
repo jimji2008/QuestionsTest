@@ -121,6 +121,7 @@ namespace QuestionsTest
 			//}
 
 			//Console.Write(a);
+			Console.Write(r+", ");
 			Console.Write(r % 1007);
 		}
 		private static bool CanPassCondition(byte[] p)
