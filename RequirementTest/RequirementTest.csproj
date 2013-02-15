@@ -39,6 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program6.cs" />
+    <Compile Include="Program_5.cs" />
+    <Compile Include="Programx.cs" />
     <Compile Include="Program_4.cs" />
     <Compile Include="Program_3.cs" />
     <Compile Include="Program_Requirments2.cs" />
@@ -53,6 +56,9 @@
     <None Include="run_test.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="input8.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="input7.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

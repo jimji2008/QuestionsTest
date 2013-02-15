@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace QuestionsTest
+namespace ConsoleApplication81
 {
-	class ProgramRequirments
+	class Program
 	{
-		const int N = 10;
 		static List<Condition> condition = new List<Condition>();
 		static void Mainx(string[] args)
 		{
@@ -31,63 +31,30 @@ namespace QuestionsTest
 			//    Console.WriteLine(c);
 			//}
 
+			//
+			List<int[]> rlist = new List<int[]>();
 
-			List<byte[]> rlist = new List<byte[]>();
-
-
-			//Console.WriteLine('1');
-			for (byte j = 0; j < N; j++)
+			for (int j = 0; j < 10; j++)
 			{
-				byte[] assignments = new byte[n];
+				int[] assignments = new int[n];
 				for (int i = 0; i < n; i++)
-					assignments[i] = byte.MaxValue;
+					assignments[i] = -1;
 				assignments[0] = j;
 				rlist.Add(assignments);
 			}
-			//Console.WriteLine('2');
-
-			foreach (var c in condition)
-			{
-				if (rlist[0][c.X] == byte.MaxValue)
-				{
-					//Console.WriteLine("2.1");
-					List<byte[]> rlist2 = new List<byte[]>(rlist.Count);
-					for (int k = 0; k < rlist.Count; k++)
-					{
-						for (byte l = 0; l < N; l++)
-						{
-							rlist[k][c.X] = l;
-							if (CanPassCondition(rlist[k]))
-								rlist2.Add((byte[])rlist[k].Clone());
-						}
-					}
-					rlist = rlist2;
-				}
-				if (rlist[0][c.Y] == byte.MaxValue)
-				{
-					//Console.WriteLine("2.2");
-					List<byte[]> rlist2 = new List<byte[]>(rlist.Count);
-					for (int k = 0; k < rlist.Count; k++)
-					{
-						for (byte l = 0; l < N; l++)
-						{
-							rlist[k][c.Y] = l;
-							if (CanPassCondition(rlist[k]))
-								rlist2.Add((byte[])rlist[k].Clone());
-						}
-					}
-
-					rlist = rlist2;
-				}
-			}
-
-			//Console.WriteLine('3');
-
-			int r = rlist.Count;
 			for (int j = 1; j < n; j++)
 			{
-				if (rlist[0][j] != byte.MaxValue) continue;
-				r = r * n;
+				List<int[]> rlist2 = new List<int[]>(rlist.Count * 5);
+				for (int k = 0; k < rlist.Count; k++)
+				{
+					for (int l = 0; l < 10; l++)
+					{
+						rlist[k][j] = l;
+						if (CanPassCondition(rlist[k]))
+							rlist2.Add((int[])rlist[k].Clone());
+					}
+				}
+				rlist = rlist2;
 			}
 
 			//int f = 0;
@@ -121,11 +88,13 @@ namespace QuestionsTest
 			//Console.Write(a);
 			Console.Write(rlist.Count % 1007);
 		}
-		private static bool CanPassCondition(byte[] p)
+
+
+		private static bool CanPassCondition(int[] p)
 		{
 			foreach (var c in condition)
 			{
-				if (p[c.X] == byte.MaxValue || p[c.Y] == byte.MaxValue)
+				if (p[c.X] == -1 || p[c.Y] == -1)
 					continue;
 
 				if (p[c.X] > p[c.Y])
@@ -133,17 +102,16 @@ namespace QuestionsTest
 			}
 			return true;
 		}
-
-		class Condition
-		{
-			public int X;
-			public int Y;
-
-			public override string ToString()
-			{
-				return string.Format("x:{0}, y:{1}", X, Y);
-			}
-		}
 	}
 
+	class Condition
+	{
+		public int X;
+		public int Y;
+
+		public override string ToString()
+		{
+			return string.Format("x:{0}, y:{1}", X, Y);
+		}
+	}
 }

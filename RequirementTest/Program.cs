@@ -10,7 +10,7 @@ namespace QuestionsTest
 	{
 		const int N = 10;
 		static List<Condition> condition = new List<Condition>();
-		static void Main(string[] args)
+		static void Mainx(string[] args)
 		{
 			//string[] line1 = "6 7".Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 			string[] line1 = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
@@ -112,6 +112,7 @@ namespace QuestionsTest
 			return f[x];
 		}
 		static int[] f = new int[] { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+
 
 
 		private static bool CanPassCondition(byte[] p)

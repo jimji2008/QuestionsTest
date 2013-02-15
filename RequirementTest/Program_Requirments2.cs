@@ -106,6 +106,16 @@ namespace QuestionsTest
 
 			//Console.WriteLine('3');
 
+			List<byte[]> rlist3 = new List<byte[]>(rlist.Count);
+			for (int k = 0; k < rlist.Count; k++)
+			{
+				if (CanPassCondition(rlist[k]))
+					rlist3.Add((byte[])rlist[k].Clone());
+			}
+
+			rlist = rlist3;
+
+			
 			long r = rlist.Count;
 			for (int j = 1; j < n; j++)
 			{

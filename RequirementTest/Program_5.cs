@@ -6,9 +6,10 @@ using System.Diagnostics;
 
 namespace QuestionsTest
 {
-	class Program4
+	class Program5
 	{
 		const int N = 10;
+		static string formatString = "";
 		static List<Condition> condition = new List<Condition>();
 		static void Mainx(string[] args)
 		{
@@ -29,11 +30,11 @@ namespace QuestionsTest
 
 			Stopwatch stopWatch = Stopwatch.StartNew();
 
-
-
+			//
 			int r = 1;
 			for (int i = 0; i < n; i++)
 			{
+				formatString += "0";
 				r = r * 10;
 			}
 
@@ -41,36 +42,22 @@ namespace QuestionsTest
 					where CanPassCondition(x)
 					select x;
 
-
 			int o = q.Count();
-			
-			Console.WriteLine(o.ToString("0000000000"));
+			//Console.WriteLine(o.ToString("0000000000"));
 			Console.WriteLine(o%1007);
 
 			stopWatch.Stop();
 			TimeSpan ts = stopWatch.Elapsed;
-			Console.Write(ts);
-		}
-		private static bool CanPassCondition(byte[] p)
-		{
-			foreach (var c in condition)
-			{
-				if (p[c.X] == byte.MaxValue || p[c.Y] == byte.MaxValue)
-					continue;
-
-				if (p[c.X] > p[c.Y])
-					return false;
-			}
-			return true;
+			//Console.Write(ts);
 		}
 		private static bool CanPassCondition(long l)
 		{
-			string str = l.ToString("000000");
+			string str = l.ToString(formatString);
 			foreach (var c in condition)
 			{
-				int a = int.Parse(str[c.X].ToString());
-				int b = int.Parse(str[c.Y].ToString());
-				if (a>b)
+				long a = long.Parse(str[c.X].ToString());
+				long b = long.Parse(str[c.Y].ToString());
+				if (a > b)
 					return false;
 			}
 			return true;

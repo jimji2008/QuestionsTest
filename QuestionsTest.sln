@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestiongsTest", "Questions
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequirementTest", "RequirementTest\RequirementTest.csproj", "{57CF409F-B654-4515-AC89-0EB333EC24ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weight", "Weight\Weight.csproj", "{E9B29578-7BE8-4EB8-B737-932F3EDDEC79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,6 +21,10 @@ Global
 		{57CF409F-B654-4515-AC89-0EB333EC24ED}.Debug|x86.Build.0 = Debug|x86
 		{57CF409F-B654-4515-AC89-0EB333EC24ED}.Release|x86.ActiveCfg = Release|x86
 		{57CF409F-B654-4515-AC89-0EB333EC24ED}.Release|x86.Build.0 = Release|x86
+		{E9B29578-7BE8-4EB8-B737-932F3EDDEC79}.Debug|x86.ActiveCfg = Debug|x86
+		{E9B29578-7BE8-4EB8-B737-932F3EDDEC79}.Debug|x86.Build.0 = Debug|x86
+		{E9B29578-7BE8-4EB8-B737-932F3EDDEC79}.Release|x86.ActiveCfg = Release|x86
+		{E9B29578-7BE8-4EB8-B737-932F3EDDEC79}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
