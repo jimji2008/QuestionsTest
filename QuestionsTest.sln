@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weight", "Weight\Weight.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candies", "Candies\Candies.csproj", "{795D83D6-A5C6-4665-8FBF-F4991808BFB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz", "FizzBuzz\FizzBuzz.csproj", "{9B5A9867-5EED-4F30-ABE0-FF21E9D8CD59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -31,6 +33,10 @@ Global
 		{795D83D6-A5C6-4665-8FBF-F4991808BFB6}.Debug|x86.Build.0 = Debug|x86
 		{795D83D6-A5C6-4665-8FBF-F4991808BFB6}.Release|x86.ActiveCfg = Release|x86
 		{795D83D6-A5C6-4665-8FBF-F4991808BFB6}.Release|x86.Build.0 = Release|x86
+		{9B5A9867-5EED-4F30-ABE0-FF21E9D8CD59}.Debug|x86.ActiveCfg = Debug|x86
+		{9B5A9867-5EED-4F30-ABE0-FF21E9D8CD59}.Debug|x86.Build.0 = Debug|x86
+		{9B5A9867-5EED-4F30-ABE0-FF21E9D8CD59}.Release|x86.ActiveCfg = Release|x86
+		{9B5A9867-5EED-4F30-ABE0-FF21E9D8CD59}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
